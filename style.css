@@ -1,0 +1,169 @@
+@keyframes rgb {
+    0% {
+        border-color: #8e0101;
+    }
+    17% {
+        border-color: #878300;
+    }
+    33% {
+        border-color: #089001;
+    }
+    50% {
+        border-color: #006d88;
+    }
+    67% {
+        border-color: #000590;
+    }
+    83% {
+        border-color: #97008f;
+    }
+    100% {
+        border-color: #7f0000;
+    }
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+html, body, main{
+    width: 100%;
+    height: 100%;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111111;
+    flex-direction: column;
+    gap: 60px
+}
+
+header {
+    color: #fff;
+}
+
+.students-dashboard {
+    padding: 10px;
+    margin: 3px;
+    width: 1000px;
+    height: 800px;
+    display: grid;
+    grid-template-areas: 
+    "semanas"
+    "subir";
+    grid-template-rows: 650px 100px;
+    gap: 1px;
+    background-color: #141414;
+    border: 5px solid #2248bb;
+    border-radius: 10px;
+    animation: rgb 20s infinite;
+}
+
+.grid-content {
+    grid-area: semanas;
+    display: grid;
+    width: 90%;
+    height: 40px;
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid #24b;
+    border-radius: 3px;
+    color: #aaa;
+    grid-template-columns: 1.5fr 2fr 1fr .5fr;
+    justify-content: center;
+    align-content: center;
+    background-color: #121212;
+    animation: rgb 20s infinite;
+
+}
+
+.submit-btn {
+    grid-area: subir;
+    width: 400px;
+    height: 40px;
+    justify-self: center;
+    margin: auto;
+}
+
+.submit-btn button {
+    width: 100%;
+    height: 100%;
+    background-color: #111;
+    color: #aaa;
+    border-style: none;
+    border: 4px solid #24b;
+    border-radius: 10px;
+    animation: rgb 20s infinite;
+}
+
+.submit-btn button:hover {
+    background-color: #222;
+    transition: 250ms;
+}
+
+.students-weeks {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.select-week {
+    outline: none;
+    background-color: #111111;
+    color: #aaa;
+    padding: 3px;
+    border-radius: 5px;
+    border-style: none;
+    border: 1px solid #aaa;
+}
+
+@media (max-width:1000px){
+    .students-dashboard {
+        width: 600px;
+        height: 600px;
+        font-size: .9rem;
+        grid-template-rows: 450px 100px;
+    }
+}
+
+@media (max-width:500px){
+    .students-dashboard {
+        width: 350px;
+        height: 500px;
+        grid-template-rows: 350px 100px ;
+        justify-content: center;
+    }
+    header {
+        font-size: 10px;
+    }
+    .grid-content {
+        width: 330px;
+        grid-template-columns: 1fr 2fr 1fr 1fr;
+        justify-items:stretch;
+        font-size: .6rem;
+        height: auto;
+    }
+
+    .select-week {
+        font-size: .5rem;
+    }
+
+    .submit-btn {
+        margin: auto;
+        width: 100px;
+    }
+
+    .submit-btn button{
+        width: 100px;
+        font-size: .7rem;
+    }
+
+}
