@@ -125,6 +125,8 @@ header {
     border: 1px solid #aaa;
 }
 
+
+
 @media (max-width:1000px){
     .students-dashboard {
         width: 600px;
@@ -132,6 +134,7 @@ header {
         font-size: .9rem;
         grid-template-rows: 450px 100px;
     }
+    
 }
 
 @media (max-width:500px){
@@ -166,4 +169,20 @@ header {
         font-size: .7rem;
     }
 
+}
+
+@media (max-height:600px){
+    .students-dashboard {
+        width: 350px;
+        height: 430px;
+        grid-template-rows: 320px 100px ;
+        justify-content: center;
+    }
+    .submit-btn button {
+        height: 30px;
+        font-size: .7rem;
+    }
+    .main-content {
+        gap: 20px
+    }
 }
